@@ -1,0 +1,290 @@
+/* =========================================================================
+   GRANT GROSVENOR — DESIGN SYSTEM TOKENS
+   colors_and_type.css
+   ========================================================================= */
+
+/* Fonts: loaded from Google Fonts (substitution — see README "Type") */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ----------------------------------------------------------------------
+     COLOR — base palette
+     ---------------------------------------------------------------------- */
+  --gg-black:        #0A0A0A;   /* near-black page base */
+  --gg-panel:        #141414;   /* card / panel fill */
+  --gg-panel-2:      #1B1B1B;   /* nested panel / hover surface */
+  --gg-line:         #222222;   /* hairline borders */
+  --gg-line-strong:  #2E2E2E;   /* heavier divider */
+
+  --gg-white:        #FAFAFA;   /* off-white, never #FFF */
+  --gg-fg-1:         #FAFAFA;   /* primary foreground */
+  --gg-fg-2:         #B8B8B8;   /* secondary text */
+  --gg-fg-3:         #6B6B6B;   /* tertiary / metadata */
+  --gg-fg-4:         #3A3A3A;   /* disabled / very low */
+
+  /* Brand */
+  --gg-green:        #154733;   /* Oregon green — anchor */
+  --gg-green-hover:  #1C5B3F;   /* hover for green fills */
+  --gg-green-soft:   #0F3325;   /* dim green for backgrounds */
+
+  --gg-gold:         #FEE123;   /* Oregon gold — accent */
+  --gg-gold-hover:   #FFEC5C;   /* hover for gold fills */
+  --gg-gold-soft:    #C9B11C;   /* dim gold for borders */
+
+  /* Semantic */
+  --gg-success:      #1C5B3F;   /* re-uses brand green */
+  --gg-warning:      #FEE123;   /* gold doubles as warn */
+  --gg-error:        #E64A3D;   /* race-bib red, used sparingly */
+  --gg-info:         #B8B8B8;
+
+  /* Status / mood (for split-times style stat blocks) */
+  --gg-pace-fast:    var(--gg-gold);
+  --gg-pace-mid:     var(--gg-fg-1);
+  --gg-pace-slow:    var(--gg-fg-3);
+
+  /* ----------------------------------------------------------------------
+     TYPE — families
+     ---------------------------------------------------------------------- */
+  --gg-font-display: 'Anton', 'Archivo Black', 'Helvetica Neue', sans-serif;
+  --gg-font-ticker:  'Bebas Neue', 'Anton', 'Helvetica Neue', sans-serif;
+  --gg-font-body:    'Archivo', 'Helvetica Neue', system-ui, sans-serif;
+  --gg-font-mono:    'JetBrains Mono', 'SF Mono', Menlo, monospace;
+
+  /* TYPE — scale (mobile-first; semantic vars below scale up at md) */
+  --gg-fs-12: 12px;
+  --gg-fs-14: 14px;
+  --gg-fs-16: 16px;
+  --gg-fs-18: 18px;
+  --gg-fs-20: 20px;
+  --gg-fs-24: 24px;
+  --gg-fs-32: 32px;
+  --gg-fs-44: 44px;
+  --gg-fs-60: 60px;
+  --gg-fs-80: 80px;
+  --gg-fs-112: 112px;
+  --gg-fs-160: 160px;
+
+  /* TYPE — leading & tracking */
+  --gg-lh-tight:   0.92;   /* display headlines */
+  --gg-lh-snug:    1.05;
+  --gg-lh-normal:  1.4;
+  --gg-lh-loose:   1.6;
+
+  --gg-tr-tight:   -0.02em;
+  --gg-tr-normal:   0;
+  --gg-tr-wide:     0.08em;
+  --gg-tr-wider:    0.16em;   /* eyebrows */
+  --gg-tr-widest:   0.24em;   /* section numbers */
+
+  /* TYPE — weights */
+  --gg-fw-regular: 400;
+  --gg-fw-medium:  500;
+  --gg-fw-semi:    600;
+  --gg-fw-bold:    700;
+  --gg-fw-black:   900;
+
+  /* ----------------------------------------------------------------------
+     SPACING — 4px base
+     ---------------------------------------------------------------------- */
+  --gg-sp-1:   4px;
+  --gg-sp-2:   8px;
+  --gg-sp-3:  12px;
+  --gg-sp-4:  16px;
+  --gg-sp-5:  24px;
+  --gg-sp-6:  32px;
+  --gg-sp-7:  48px;
+  --gg-sp-8:  64px;
+  --gg-sp-9:  96px;
+  --gg-sp-10: 128px;
+
+  /* ----------------------------------------------------------------------
+     RADII
+     ---------------------------------------------------------------------- */
+  --gg-r-0:  0px;     /* hero, sections, image blocks */
+  --gg-r-1:  4px;     /* buttons, inputs */
+  --gg-r-2:  8px;     /* content cards */
+  --gg-r-3:  12px;    /* (rare — modal corners) */
+
+  /* ----------------------------------------------------------------------
+     BORDERS
+     ---------------------------------------------------------------------- */
+  --gg-bd-hairline:    1px solid var(--gg-line);
+  --gg-bd-strong:      1px solid var(--gg-line-strong);
+  --gg-bd-accent-grn:  2px solid var(--gg-green);
+  --gg-bd-accent-gld:  2px solid var(--gg-gold);
+
+  /* ----------------------------------------------------------------------
+     SHADOWS — used sparingly
+     ---------------------------------------------------------------------- */
+  --gg-shadow-modal:   0 24px 64px rgba(0,0,0,0.6);
+  --gg-shadow-sticky:  0 -1px 0 0 var(--gg-line), 0 -8px 24px rgba(0,0,0,0.4);
+  --gg-shadow-glow-gold: 0 0 0 1px rgba(254,225,35,0.4), 0 0 24px rgba(254,225,35,0.15);
+
+  /* ----------------------------------------------------------------------
+     MOTION
+     ---------------------------------------------------------------------- */
+  --gg-ease-out:       cubic-bezier(0.16, 1, 0.3, 1);
+  --gg-ease-out-expo:  cubic-bezier(0.19, 1, 0.22, 1);
+  --gg-dur-fast:    150ms;
+  --gg-dur-base:    250ms;
+  --gg-dur-slow:    400ms;
+  --gg-dur-stat:    800ms;
+
+  /* ----------------------------------------------------------------------
+     LAYOUT
+     ---------------------------------------------------------------------- */
+  --gg-content-max:   1280px;
+  --gg-gutter:        24px;
+  --gg-nav-h:         64px;
+
+  /* ----------------------------------------------------------------------
+     SEMANTIC TYPE — element-level
+     ---------------------------------------------------------------------- */
+  --gg-h0-size:    clamp(80px, 13vw, 160px);   /* hero blast */
+  --gg-h1-size:    clamp(60px,  9vw, 112px);
+  --gg-h2-size:    clamp(44px,  6vw,  80px);
+  --gg-h3-size:    clamp(32px,  4vw,  44px);
+  --gg-h4-size:    24px;
+
+  --gg-eyebrow-size: 12px;
+  --gg-body-size:    16px;
+  --gg-body-lg-size: 18px;
+  --gg-caption-size: 12px;
+}
+
+/* ===========================================================================
+   ELEMENT-LEVEL (semantic) STYLES
+   These are applied via `.gg-h0`, `.gg-eyebrow`, etc — opt-in, not global,
+   so this file is safe to import anywhere.
+   =========================================================================== */
+
+.gg-h0 {
+  font-family: var(--gg-font-display);
+  font-weight: var(--gg-fw-regular);          /* Anton has only one weight */
+  font-size: var(--gg-h0-size);
+  line-height: var(--gg-lh-tight);
+  letter-spacing: var(--gg-tr-tight);
+  text-transform: uppercase;
+  color: var(--gg-fg-1);
+}
+
+.gg-h1 {
+  font-family: var(--gg-font-display);
+  font-size: var(--gg-h1-size);
+  line-height: var(--gg-lh-tight);
+  letter-spacing: var(--gg-tr-tight);
+  text-transform: uppercase;
+  color: var(--gg-fg-1);
+}
+
+.gg-h2 {
+  font-family: var(--gg-font-display);
+  font-size: var(--gg-h2-size);
+  line-height: var(--gg-lh-snug);
+  letter-spacing: var(--gg-tr-tight);
+  text-transform: uppercase;
+  color: var(--gg-fg-1);
+}
+
+.gg-h3 {
+  font-family: var(--gg-font-ticker);
+  font-size: var(--gg-h3-size);
+  line-height: var(--gg-lh-snug);
+  letter-spacing: var(--gg-tr-wide);
+  text-transform: uppercase;
+  color: var(--gg-fg-1);
+}
+
+.gg-h4 {
+  font-family: var(--gg-font-body);
+  font-weight: var(--gg-fw-bold);
+  font-size: var(--gg-h4-size);
+  line-height: var(--gg-lh-snug);
+  letter-spacing: var(--gg-tr-tight);
+  color: var(--gg-fg-1);
+}
+
+.gg-eyebrow {
+  font-family: var(--gg-font-body);
+  font-weight: var(--gg-fw-semi);
+  font-size: var(--gg-eyebrow-size);
+  line-height: 1;
+  letter-spacing: var(--gg-tr-widest);
+  text-transform: uppercase;
+  color: var(--gg-gold);
+}
+
+.gg-eyebrow--muted { color: var(--gg-fg-3); }
+
+.gg-stat {                /* the giant numbers — 3:58, 2× NCAA, etc */
+  font-family: var(--gg-font-display);
+  font-size: var(--gg-fs-112);
+  line-height: var(--gg-lh-tight);
+  letter-spacing: var(--gg-tr-tight);
+  color: var(--gg-fg-1);
+}
+.gg-stat--gold  { color: var(--gg-gold); }
+.gg-stat--green { color: var(--gg-green); }
+
+.gg-stat-caption {
+  font-family: var(--gg-font-body);
+  font-weight: var(--gg-fw-semi);
+  font-size: var(--gg-fs-12);
+  letter-spacing: var(--gg-tr-widest);
+  text-transform: uppercase;
+  color: var(--gg-fg-3);
+}
+
+.gg-body {
+  font-family: var(--gg-font-body);
+  font-weight: var(--gg-fw-regular);
+  font-size: var(--gg-body-size);
+  line-height: var(--gg-lh-loose);
+  color: var(--gg-fg-2);
+  text-wrap: pretty;
+}
+
+.gg-body-lg {
+  font-family: var(--gg-font-body);
+  font-weight: var(--gg-fw-regular);
+  font-size: var(--gg-body-lg-size);
+  line-height: var(--gg-lh-loose);
+  color: var(--gg-fg-1);
+  text-wrap: pretty;
+}
+
+.gg-caption {
+  font-family: var(--gg-font-body);
+  font-weight: var(--gg-fw-regular);
+  font-size: var(--gg-caption-size);
+  line-height: var(--gg-lh-normal);
+  color: var(--gg-fg-3);
+  letter-spacing: var(--gg-tr-wide);
+  text-transform: uppercase;
+}
+
+.gg-mono {
+  font-family: var(--gg-font-mono);
+  font-size: var(--gg-fs-14);
+  letter-spacing: 0;
+  color: var(--gg-fg-2);
+}
+
+.gg-section-num {        /* /01, /02, /03 */
+  font-family: var(--gg-font-mono);
+  font-weight: var(--gg-fw-medium);
+  font-size: var(--gg-fs-14);
+  letter-spacing: var(--gg-tr-widest);
+  color: var(--gg-gold);
+  text-transform: uppercase;
+}
+
+/* Page reset — opt-in, applied to .gg-root */
+.gg-root {
+  background: var(--gg-black);
+  color: var(--gg-fg-1);
+  font-family: var(--gg-font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.gg-root *, .gg-root *::before, .gg-root *::after { box-sizing: border-box; }
