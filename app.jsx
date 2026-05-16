@@ -1,5 +1,5 @@
 /* global React, ReactDOM, Nav, Hero, StatsSection, StorySection, Breaker, FunnelSection,
-   SobrietySection, Footer, Stripes, Ticker, Questionnaire,
+   SobrietySection, BrandsSection, DesignSection, RecoverySection, WorkWithMe, Footer, Stripes, Ticker, Questionnaire,
    COACHING_QUESTIONS, GROUP_QUESTIONS */
 const { useState } = React;
 
@@ -52,14 +52,14 @@ function App() {
         status="6 SLOTS · APPLICATION OPEN"
         title={<>1:1 Custom<br/>Training & Coaching</>}
         paragraphs={[
-          "I coach a small number of athletes who are already serious — and want to take the next step in a way that actually compounds.",
-          "Not everyone who applies is a fit. Coaching is a relationship and the wrong one wastes both of our time. A few questions, then we talk."
+          "If you're chasing a goal — a time, a race, or just figuring out how far you can take this thing — I'd love to coach you. I keep the roster small so every athlete actually gets me.",
+          "Tell me a little about where you're at. Six quick questions, and if it feels like a fit we'll set up a call."
         ]}
         points={[
-          'You\'re training consistently and want a coach who treats that as table stakes.',
-          'You have a specific time goal — not a vibe — and a date.',
-          'You can take honest feedback without flinching.',
-          'You\'re willing to commit three months minimum, because that\'s how training works.',
+          'You love running and you want to get faster — at any level.',
+          'You have a goal in mind, even if it\'s still taking shape.',
+          'You want a real coach in your corner, not a templated plan.',
+          'You\'re ready to show up for yourself for a few months and see what happens.',
         ]}
         panel={COACHING_PANEL}
         onApply={() => setOpen('coaching')}
@@ -87,6 +87,14 @@ function App() {
       />
 
       <SobrietySection />
+
+      <BrandsSection />
+
+      <DesignSection />
+
+      <RecoverySection />
+
+      <WorkWithMe />
 
       <Footer />
 
