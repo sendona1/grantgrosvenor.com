@@ -5,9 +5,10 @@ const { useState } = React;
 
 const COACHING_PANEL = {
   tag: 'APPLY ONLY',
+  price: 'BY APPLICATION', priceSuffix: '',
   slots: '6',
-  cta: 'APPLY FOR 1:1 COACHING',
-  meta: 'APPLICATION ONLY · NOTHING CHARGED YET',
+  cta: 'APPLY FOR COACHING',
+  meta: 'APPLICATION ONLY',
   includes: [
     'Custom periodized training, week-by-week',
     'Weekly 1:1 video call (45 min)',
@@ -19,14 +20,14 @@ const COACHING_PANEL = {
 
 const GROUP_PANEL = {
   tag: 'COHORT BASED',
+  price: 'BY APPLICATION', priceSuffix: '',
   slots: '40',
   cta: 'JOIN COMEBACK COLLECTIVE GROUP',
-  meta: 'APPLICATION ONLY · NOTHING CHARGED YET',
+  meta: 'APPLICATION ONLY',
   includes: [
     'Private group of post-collegiate athletes who came back',
     'Monthly Q&A and accountability calls with me',
     'Training templates · pacing tools · race calendar',
-    'Sober-curious channel for athletes who want one',
     'Honest community. No grindset slogans.',
   ],
 };
@@ -39,7 +40,7 @@ function App() {
       <Nav />
       <Hero />
       <Stripes />
-      <Ticker items={['SUB-4', '2× NCAA', 'WORLD RANKED', 'OREGON', 'SOBER', 'UNFINISHED', 'BACK FASTER', 'COMEBACK SZN', '3:58.58 AT 33']} />
+      <Ticker items={['SUB-4', '2× NCAA', 'WORLD RANKED', 'OREGON', 'SOBER', 'UNFINISHED', 'BACK FASTER', 'COMEBACK SZN', 'BIB 1:46.45']} />
       <StatsSection />
       <StorySection />
 
@@ -50,7 +51,7 @@ function App() {
         number="01"
         label="COACHING"
         status="6 SLOTS · APPLICATION OPEN"
-        title={<>1:1 Custom<br/>Training & Coaching</>}
+        title="Let's go find your next PR."
         paragraphs={[
           "If you're chasing a goal — a time, a race, or just figuring out how far you can take this thing — I'd love to coach you. I keep the roster small so every athlete actually gets me.",
           "Tell me a little about where you're at. Six quick questions, and if it feels like a fit we'll set up a call."
@@ -68,10 +69,9 @@ function App() {
       <FunnelSection
         id="group"
         number="02"
-        label="COMEBACK COLLECTIVE"
+        label="UNFINISHED BUSINESS"
         status="COHORT-BASED · ROLLING ENTRY"
-        title="Comeback Collective Group."
-        subtitle="For post-collegiate athletes."
+        title="For athletes who left something on the track."
         paragraphs={[
           "If you stopped competing and you can't quite let it go — this group is for you. Post-collegiate runners, swimmers, throwers, the whole spread. Some are deep in their comeback, some are still on the fence.",
           "It's the room I wish I'd had during my five years off. We train together remotely, we talk honestly, and we don't pretend any of it is easy.",
@@ -109,7 +109,7 @@ function App() {
         open={open === 'group'}
         onClose={() => setOpen(null)}
         productKey="group"
-        productLabel="Comeback Collective Group"
+        productLabel="Unfinished Business Group"
         questions={GROUP_QUESTIONS}
       />
     </>
