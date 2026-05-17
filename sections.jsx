@@ -111,7 +111,7 @@ function StorySection() {
         <SectionHeader number="00" label="THE STORY" status="GRIT · REINVENTION · UNFINISHED" title={<>Walked away.<br/>Came back faster.</>} />
         <div className="gg-story">
           <div className="gg-story__media">
-            <span className="gg-story__media-tag">FLAGSTAFF, AZ · ALTITUDE BLOCK · 2026</span>
+            <span className="gg-story__media-tag">FLAGSTAFF, AZ · ALTITUDE BLOCK</span>
           </div>
           <div className="gg-story__copy">
             <p>In 2016 I won two national titles with the University of Oregon (DMR, Team) and just missed qualifying for the Olympic Trials by 3 spots. I was broke, didn't love running, and turned to working.</p>
@@ -140,11 +140,11 @@ function Breaker() {
 }
 
 /* ===== Funnel section (reusable for Coaching + Group) ===================== */
-function FunnelSection({ id, number, label, status, title, subtitle, paragraphs, points, panel, onApply }) {
+function FunnelSection({ id, number, label, status, title, paragraphs, points, panel, onApply }) {
   return (
     <section className="gg-section" id={id}>
       <div className="gg-container">
-        <SectionHeader number={number} label={label} status={status} title={title} subtitle={subtitle} />
+        <SectionHeader number={number} label={label} status={status} title={title} />
         <div className="gg-funnel">
           <div className="gg-funnel__copy">
             {paragraphs.map((p, i) => <p key={i}>{p}</p>)}
@@ -291,7 +291,7 @@ function BrandsSection() {
             <div className="gg-funnel__panel-header">
               <div>
                 <span className="gg-funnel__panel-tag">REQUEST DECK</span>
-                <div style={{ fontFamily: 'var(--gg-font-display)', fontSize: 36, lineHeight: 1, color: 'var(--gg-fg-1)', marginTop: 12 }}>BRAND<br/>DECK •25</div>
+                <div style={{ fontFamily: 'var(--gg-font-display)', fontSize: 36, lineHeight: 1, color: 'var(--gg-fg-1)', marginTop: 12 }}>BRAND<br/>DECK •26</div>
               </div>
               <div style={{ textAlign: 'right' }}>
                 <div className="gg-funnel__panel-meta">RESPONSE</div>
@@ -367,9 +367,9 @@ function DesignSection() {
 
   const offerings = [
     { tag: 'WEBSITE', title: 'Athlete Websites', price: 'FROM $XXX',
-      bullets: ['A site that actually looks like a pro', 'Race results, story, sponsor logos, contact', 'Built fast — typically 2 weeks from kickoff', 'You own the domain, the code, and the assets'] },
+      bullets: ['Professionally designed website to showcase you, your story and accomplishments', 'Completely custom. Website launched in 48–72 hours', 'Contact/form integration, payment integration, affiliate links, contact', 'Build credibility and establish better brand visibility', 'You own the domain, the code, and the assets'] },
     { tag: 'BRAND DECK', title: 'Brand Decks for Athletes', price: 'FROM $XX',
-      bullets: ['The deck I wish I\'d had when I started reaching out', 'Audience, results, calendar, partnership tiers', 'Editable templates you can update yourself', 'Designed to actually close brand conversations'] },
+      bullets: ['Designed specifically to showcase your athletic accomplishments and value to brands', 'Confidence to present your unique story, land more brand deals, and ask for more', 'Audience, results, calendar, partnership tiers', 'Editable templates you can update yourself', 'Designed to actually close brand conversations'] },
   ];
 
   return (
@@ -614,7 +614,7 @@ function Footer() {
             <ul>
               <li><a href="#story">Story</a></li>
               <li><a href="#coaching">Coaching</a></li>
-              <li><a href="#group">Comeback Collective</a></li>
+              <li><a href="#group">Unfinished Business</a></li>
               <li><a href="#sobriety">Sobriety</a></li>
               <li><a href="#contact">Work with me</a></li>
             </ul>
