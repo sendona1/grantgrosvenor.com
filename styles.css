@@ -351,7 +351,7 @@ button { font-family: inherit; }
 }
 .gg-section-head__label {
   font-family: var(--gg-font-body); font-weight: 600;
-  font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;
+  font-size: 14px; letter-spacing: 0.24em; text-transform: uppercase;
   color: var(--gg-fg-3);
 }
 .gg-section-head__status {
