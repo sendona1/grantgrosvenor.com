@@ -442,7 +442,7 @@ function RecoverySection() {
     {
       name: 'Shakti Mat',
       tag: 'ACUPRESSURE · RECOVERY',
-      note: 'Ten minutes on this before bed and my legs reset.',
+      note: '15 minutes daily for a nervous system reset.',
       url: 'shaktimat.com/grant',
       href: 'https://shaktimat.com/grant',
       code: 'GRANT',
