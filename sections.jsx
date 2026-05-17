@@ -614,7 +614,7 @@ function Footer() {
             <ul>
               <li><a href="#story">Story</a></li>
               <li><a href="#coaching">Coaching</a></li>
-              <li><a href="#group">Unfinished Business</a></li>
+              <li><a href="#group">Comeback Collective</a></li>
               <li><a href="#sobriety">Sobriety</a></li>
               <li><a href="#contact">Work with me</a></li>
             </ul>
