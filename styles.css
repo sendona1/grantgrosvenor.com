@@ -451,7 +451,7 @@ button { font-family: inherit; }
   height: 60vh;
   min-height: 420px;
   max-height: 640px;
-  background-image: url('assets/photo-solo-run.png');
+  background-image: url('assets/photo-solo-run.jpg');
   background-size: cover;
   background-position: 50% 20%;
   filter: contrast(1.04) saturate(0.85);
