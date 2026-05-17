@@ -434,7 +434,7 @@ function RecoverySection() {
     {
       name: 'Lagoon Sleep',
       tag: 'PILLOWS · SLEEP',
-      note: 'The pillow that actually fixed my neck on travel weeks.',
+      note: 'Custom pillow based on my needs for optimized recovery and insanely good sleep!',
       url: 'lagoonsleep.com/grant',
       href: 'https://lagoonsleep.com/grant',
       code: 'GRANT',
