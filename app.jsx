@@ -28,7 +28,7 @@ const GROUP_PANEL = {
     'Private group of post-collegiate athletes who came back',
     'Monthly Q&A and accountability calls with me',
     'Training templates · pacing tools · race calendar',
-    'Honest community. No grindset slogans.',
+    'Honest community. Working towards a better lifestyle.',
   ],
 };
 
